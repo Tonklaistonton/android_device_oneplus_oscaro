@@ -15,6 +15,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from oscaro device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+#Inherit vendor_certification
+$(call inherit-product-if-exists, vendor/certification/config.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_oscaro
 PRODUCT_DEVICE := oscaro
